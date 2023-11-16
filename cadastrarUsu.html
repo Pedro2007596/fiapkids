@@ -52,7 +52,7 @@
             margin-bottom: 15px;
         }
 
-        form div{
+        .form-div{
             text-align: right;
             padding-right: 30px;
         }
@@ -78,18 +78,24 @@
         }
 
     </style>
+    <script src="Fiapkids.js"></script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
+        crossorigin="anonymous">
+    </script>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar navbar-brand" href="index.html">FiapKids</a>
+            <a class="navbar navbar-brand" href="/">FiapKids</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="navbar nav-link" href="cadastrarUsu.html">Cadastro de Pessoa</a>
+                        <a class="navbar nav-link" href="/cadastrarUsuario">Cadastro de Pessoa</a>
                     </li>
                     <li class="nav-item">
                         <a class="navbar nav-link" href="cadastrarBrinquedo.html">Cadastro de Produto</a>
@@ -102,23 +108,17 @@
         <div class="form-user">
         <h1>Cadastro de Usuários</h1>
         <form action="/cadastrarUsuario" method="post">
-            <label for="id_email">Nome</label>
-            <input type="text" name="Nome" id="nome">
-            <label for="id_email">E-mail</label>
+            <label for="id_email">Nome:</label>
+            <input type="text" name="nome" id="nome">
+            <label for="id_email">E-mail:</label>
             <input type="email" name="email" id="email">
-            <label for="id_senha">Senha</label>
+            <label for="id_senha">Senha:</label>
             <input type="password" name="senha" id="senha">
             <div>
                 <button type="submit">Enviar</button>
             </div>
         </form>
     </div>
-    <script src="Fiapkids.js"></script>
-    <script 
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
-        crossorigin="anonymous">
-    </script>
     <footer class="py-5 bg-dark">
         <div class="container"><p class="m-0 text-center text-white">Copyright &copy; FiapKids 2023</p></div>
     </footer>

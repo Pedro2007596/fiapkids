@@ -4,6 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
  
 //configurando o roteamento para teste no postman
+const router = require('express').Router();
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
@@ -18,20 +19,20 @@ mongoose.connect('mongodb://127.0.0.1:27017/FiapKids',
  
 //cadastro do usuario
 const CadastroSchema = new mongoose.Schema({
-	email : {type : String, required : true},
-	senha : {type : String},
-    nome : {type : String}
+    nome : {type : String},
+    email : {type : String, required: true},
+    senha : {type : String}
 });
 const Cadastro = mongoose.model("Cadastro", CadastroSchema);
  
 //configurando os roteamentos
 app.post("/cadastrarUsuario", async(req, res)=>{
+	const nome = req.body.nome; 
 	const email = req.body.email;
-	const senha = req.body.senha;
-    const nome = req.body.nome;
- 
+    const senha = req.body.senha;
+    
     //testando se todos os campos foram prenchidos
-    if(email == null || senha == null || nome == null ){
+    if(nome == null || email == null || senha == null ){
         return res.status(400).json({error: "Preencha todos os dados.."})
     }
  
@@ -43,9 +44,9 @@ app.post("/cadastrarUsuario", async(req, res)=>{
  
     //mandando para o banco
     const Cadastrado = new Cadastro({
+        nome : nome,
         email : email,
-		senha : senha,
-		nome : nome
+		senha : senha
     })
  
     try{
