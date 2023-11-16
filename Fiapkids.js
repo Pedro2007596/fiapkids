@@ -75,12 +75,12 @@ app.post("/cadastrarBrinquedo", async (req, res) => {
         return res.status(400).json({ error: "Preencher todos os campos" });
     }
 
-    const codigoExiste = await Brinquedo.findOne({ codigo: codigo });
-    if (codigoExiste) {
+    const BrinquedoExiste = await Brinquedo.findOne({ codigo: codigo });
+    if (BrinquedoExiste) {
         return res.status(400).json({ error: "O produto já existe!!!" });
     }
 
-    const Brinquedo = new Brinquedo({
+    const brinquedo = new Brinquedo({
         codigo: codigo,
         descricao: descricao,
         marca: marca,
@@ -89,8 +89,8 @@ app.post("/cadastrarBrinquedo", async (req, res) => {
     });
 
     try {
-        const newBrinquedo = await Brinquedo.save();
-        res.json({ error: null, msg: "Cadastro ok", codigoId: codigo._id });
+        const newBrinquedo = await brinquedo.save();
+        res.json({ error: null, msg: "Cadastro ok", BrinquedoId: brinquedo._id });
     } catch (error) {
         res.status(400).json({ error });
     }
