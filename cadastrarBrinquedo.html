@@ -14,6 +14,9 @@
         padding-left: 10px;
         padding-right: 10px;
       }
+      .navbar{
+        background-color: #29f4d5;
+      }
       .bg-white{
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       }
@@ -265,64 +268,63 @@
 </style>
 </head>
 <body>
-<header id="home">
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-<a class="navbar-brand" href="/"><img src="https://github.com/ZeDio/Visao-Educada/blob/main/Imgs/Icones/Logo.png?raw=true" alt="Logo" class="Logo"></a>
-<a class="navbar-brand" href="">Fiapkids</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-<ul class="navbar-nav">
-<li class="nav-item">
-<a class="nav-link" href="/">Home</a>
-</li>
-<li class="nav-item">
-</li>
-<li class="nav-item">
-<a class="nav-link" href="/cadastrarBrinquedo">Cadastrar Produto</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="/cadastrarUsuario">Cadastrar Usuario</a>
-</li>
-</ul>
-</div>
-</nav>
-</header>
+    <header id="home">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <a class="navbar-brand" href="/">Fiap kids</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+        <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/cadastrarBrinquedo">Cadastrar Produto</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/cadastrarUsuario">Cadastrar Usuario</a>
+        </li>
+        </ul>
+        </div>
+        </nav>
+        </header>
+         
  
 <main>
     <section class="section-img section1">
-    <h1>Cadastrar Brinquedo</h1></a>
+       
      
-                <div class="containeer">
-    <h1>Cadastrar Brinquedo</h1>
-    <form action="/cadastrarBrinquedo" method="post">
-    <div class="form-group">
-    <label for="codigo">codigo:</label>
-    <input type="text" id="codigo" name="codigo" required>
-    </div>
-    <div class="form-group">
-    <label for="descrição">descrição:</label>
-    <input type="text" id="descrição" name="descrição" required>
-    </div>
-    <div class="form-group">
-    <label for="fornecedor">fornecedor:</label>
-    <input type="text" id="fornecedor" name="fornecedor" required>
-    </div>
-    <div class="form-group">
-    <label for="data_fabricação">data_fabricação:</label>
-    <input type="date" id="data_fabricação" name="data_fabricação" required>
-    </div>
-    <div class="form-group">
-    <label for="quantidade_estoque">quantidade_estoque:</label>
-    <input type="number" id="quantidade_estoque" name="quantidade_estoque" required>
-    </div>
-    </div>
-    <button class="button" type="submit">Enviar</button>
-    </form>
-    </div>
+        <div class="containeer">
+            <form action="/cadastrarBrinquedo" method="post">
+                <h1>Cadastrar Brinquedo</h1>
+                <div class="form-group">
+                    <label for="codigo">Código:</label>
+                    <input type="text" id="codigo" name="codigo" required>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição:</label>
+                    <input type="text" id="descricao" name="descricao" required>
+                </div>
+                <div class="form-group">
+                    <label for="fornecedor">Fornecedor:</label>
+                    <input type="text" id="fornecedor" name="fornecedor" required>
+                </div>
+                <div class="form-group">
+                    <label for="data_fabricacao">Data de Fabricação:</label>
+                    <input type="date" id="data_fabricacao" name="data_fabricacao" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantidade_estoque">Quantidade em Estoque:</label>
+                    <input type="number" id="quantidade_estoque" name="quantidade_estoque" required>
+                </div>
+                <button class="button" type="submit">Enviar</button>
+            </form>
+        </div>
     </section>
-    </main>
+</main>
  
     <footer>
 <div class="container">

@@ -14,7 +14,7 @@ const port = 3000;
 mongoose.connect('mongodb://127.0.0.1:27017/FiapKids', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  serverSelectionTimeoutMS: 30000,
+  serverSelectionTimeoutMS: 100000,
 });
  
 //cadastro do usuario
@@ -75,7 +75,7 @@ app.post("/cadastrarBrinquedo", async(req, res)=>{
     if(codigo == null || descricao == null || fornecedor == null || data_fabricacao == null || quantidade_estoque == null){
         return res.status(400).json({error: "Preencha todos os dados.."})
     }
-    const codigoExistente = await cadastrarBrinquedo.findOne({codigo:codigo})
+    const codigoExistente = await Brinquedo.findOne({codigo:codigo})
     if(codigoExistente){
         return res.status(400).json({error : "O codigo cadastrado já existe!!"})
     }
@@ -91,9 +91,10 @@ app.post("/cadastrarBrinquedo", async(req, res)=>{
  
     try{
         const newBrinquedo = await cadBrinquedo.save();
-        res.json({error : null, msg : "Cadastro ok", BrinquedoId : newBrinquedo._id});
-    } catch(error){
-        res.status(400).json({error});
+        res.json({ error: null, msg: "Cadastro ok", BrinquedoId: newBrinquedo._id });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Erro interno do servidor" });
     }
 });
  
