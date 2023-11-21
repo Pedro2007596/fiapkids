@@ -5,38 +5,43 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>FIAP KIDS</title>
+        <title>FiapKids</title>
         <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link href="css/styles.css" rel="stylesheet" />
         <script src="Fiapkids.js"></script>
         <style>
             .navbar {
-                background-color: #29f4d5;
-                color: #ff0000;
+                background-color: white;
+                color: #ff008c;
             }
             
         </style>
     </head>
     <body>
-        <header>
-            <nav class="navbar navbar-expand-lg">
-                <a class="navbar navbar-brand" href="/">FiapKids</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="navbar nav-link" href="/cadastrarUsuario">Cadastro de Pessoa</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="navbar nav-link" href="/cadastrarBrinquedo">Cadastro de Produto</a>
-                        </li>
-                    </ul>
-                </div>
+        <header id="home">
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <a class="navbar-brand" href="/">Fiap kids</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/cadastrarBrinquedo">Cadastrar Produto</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="/cadastrarUsuario">Cadastrar Usuario</a>
+            </li>
+            </ul>
+            </div>
             </nav>
-        </header>
+            </header>
         <main>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -46,13 +51,13 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img class="d-block w-100" height="800" width="20" src="img/Caixa pokemon.jpg" alt="primeira">
+                <img class="d-block w-100" height="800" width="20" src="public/img/Caixa pokemon.jpg" alt="primeira">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" height="800" width="20" src="img/lego.jpg" alt="Segunda">
+                <img class="d-block w-100" height="800" width="20" src="public/img/lego.jpg" alt="Segunda">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" height="800" width="20" src="img/war.jpg" alt="Terceira">
+                <img class="d-block w-100" height="800" width="20" src="public/img/war.jpg" alt="Terceira">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
